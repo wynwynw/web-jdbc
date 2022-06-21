@@ -1,0 +1,15 @@
+# Project exclude paths
+/18-maven-parent/19-maven-java1/target/
+/18-maven-parent/20-module-web/target/
+/21-pro05-all-in-one/target/
+/22-Mybatis/target/
+/23-Mybatis2/target/
+/24-Mybatis04/target/
+/25-MyBatis/target/
+/35-1-springmvc-demo2/target/
+/35-springmvc-demo1/target/
+/36-2-springvc-demo3/target/
+/37-3-springmvc-demo4/target/
+/38-springmvcjsp-demo5/target/
+/39-springmvc-rest-demo6/target/
+/out/
