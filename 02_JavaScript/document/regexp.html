@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //表示要求字符串中 是否包含字母e
+        //  var patt = new RegExp("w");
+        //  var patt = /w/;也是正则表达式
+        //表示要求字符串中 是否包含字母w或者s
+        //var patt = /[ws]/;
+        //表示要求字符串中 是否包含小写字母
+        //var patt = /[a-z]/;
+        //表示要求字符串中 是否包含大写字母
+        // var patt = /[A-Z]/;
+        //表示要求字符串中 是否包含任意数字
+        // var patt = /[0-9]/;
+        //表示要求字符串中 是否包含字母 数字 下划线
+        //var patt = /\w/;
+        //表示要求字符串中 是否包含至少一个a
+        // var patt = /a+/;
+        //表示要求字符串中 是否包含零个或多个a
+        // var patt = /a*/;
+        //表示要求字符串中 是否包含零个或一个a
+        //var patt = /a?/;
+        //表示要求字符串中 是否包含连续三个a
+        //var patt = /a{3}/;
+        //表示要求字符串中 是否包含 至少三个连续的a 最多5个连续的a
+        // var patt = /a{3,5}/;
+        //表示要求字符串中 是否包含 至少三个连续的a
+        // var patt = /a{3,}/;
+        //表示要求字符串中 必须以a结尾
+        //var patt = /a$/;
+        //表示要求字符串中 必须以a开头
+        //var patt = /^a/;
+        //要求字符串 从头到尾必须完全匹配
+        var patt = /^a{3,5}$/;
+        var str = "aaaaa";
+        alert(patt.test(str));
+        //  var patt = /^\w{5,12}$/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

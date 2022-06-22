@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload=function (){
+            //使用js代码来创建html标签 并且显示在页面上
+            //标签的内容就是<div>哈哈哈哈</div>
+            var divobj = document.createElement("div");//在内存中<div></div>
+            var text = document.createTextNode("哈哈哈");//有一个文本的节点对象 哈哈哈
+            divobj.appendChild(text);
+            alert(divobj);
+            //divobj.innerHTML = "哈哈哈哈";//<div>哈哈哈哈</div> 还在内存中
+            //添加子元素
+            document.body.appendChild(divobj);
+        }
+
+    </script>
+</head>
+<body>
+<div>哈哈哈哈</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var obj = {};
+        alert(typeof (obj));
+        /*
+        * 对象的定义：
+        * var 变量名 = {
+        * // 空对象 属性名：值,
+        *  // 定义一个属性 属性名：值,
+        *  // 定义一个属性 函数名：function(){} // 定义一个函数 };
+        * 对象的访问： 变量名.属性 / 函数名();
+        * */
+        var obj1 = {
+            name: "哈哈",
+            age: 18,
+            fun: function () {
+                alert("姓名:" + this.name + "年龄：" + this.age);
+            }
+        };
+        alert(obj1.name);
+        obj1.fun();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

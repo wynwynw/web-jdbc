@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /** 需求：当用户点击了较验按钮，要获取输出框中的内容。
+         * 然后验证其是否合法。<br/>
+         * * 验证的规则是：必须由字母，数字。下划线组成。并且长度是 5 到 12 位。
+         * * */
+        function onclickFun() {
+            // 1 当我们要操作一个标签的时候，一定要先获取这个标签对象。
+            var elementById = document.getElementById("username");
+            // var password = document.getElementById("pass");
+            // var pass = password.value;
+            // var regexp = /^{5,8}&/
+            // var passwordspan = document.getElementById("passwordspan");
+            // if (regexp.test(pass)) {
+            //     passwordspan.innerHTML = "<img src=\"right.png\" width=\"15\" height=\"15\">";
+            // } else {
+            //     passwordspan.innerHTML = "<img src=\"wrong.png\" width=\"15\" height=\"15\">";
+            //
+            // }
+            //[object HTMLInputElement] 它就是 dom 对象
+            var usernametext = elementById.value;
+            //   alert(elementById.value);
+            // 如何 验证 字符串，符合某个规则 ，需要使用正则表达式技术
+            var patt = /^\w{5,12}$/
+            /** test()方法用于测试某个字符串，是不是匹配我的规则 ，
+             *  * 匹配就返回 true。不匹配就返回 false. * */
+            var usernameSpanObj = document.getElementById("usernamespan");
+            //innerHTML  表示起始标签和结束标签的内容
+            //innerHTML 这个属性可读可写
+            //usernameSpanObj.innerHTML = "哈哈哈哈哈";
+            if (patt.test(usernametext)) {
+                usernameSpanObj.innerHTML = "<img src=\"right.png\" width=\"15\" height=\"15\">";
+            } else {
+                usernameSpanObj.innerHTML = "   <img src=\"wrong.png\"  width=\"15\" height=\"15\">";
+
+            }
+            // var password = document.getElementById("pass");
+            // var pass = password.value;
+            // var regexp = /^{5,8}&/
+            // var passwordspan = document.getElementById("passwordspan");
+            // if (regexp.test(pass)) {
+            //     passwordspan.innerHTML = "<img src=\"right.png\" width=\"15\" height=\"15\">";
+            // } else {
+            //     passwordspan.innerHTML = "<img src=\"wrong.png\" width=\"15\" height=\"15\">";
+            //
+            // }
+
+        }
+    </script>
+</head>
+<body>
+用户名:<input type="text" id="username" value="wzg">
+<span id="usernamespan" style="color:red;">
+    <!--<img src="right.png" width="15" height="15">-->
+    <!--
+        <img src="wrong.png"  width="15" height="15">
+    -->
+</span><br/>
+密码:<input type="password" id="pass" value="123">
+<span id="passwordspan" style="color:red;">
+    <!--<img src="right.png" width="15" height="15">-->
+    <!--
+        <img src="wrong.png"  width="15" height="15">
+    -->
+</span>
+<button onclick="onclickFun()">校验</button>
+</body>
+</html>
